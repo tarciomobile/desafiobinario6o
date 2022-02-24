@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Terminal - PCP</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <style>
+    body {
+      background-color: #222222;
+      font-size: 16px;
+    }
+
+    #terminal {
+      width: 100%;
+      height: 50px;
+      font-size: 22px;
+    }
+
+    #resultado {
+      font-family: monospace;
+      font-size: 16px;
+      color: #00FF00;
+      padding: 20px;
+      margin-bottom: 200px;
+    }
+
+    #creditos {
+      color: rgba(255, 255, 255, 0.459);
+      font-size: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="creditos" align="center">Desenvolvido por: Prof. Diego M. de Pinho. V04112021</div>
+  <p id="resultado">
+    >> Olá amigo(a) hacker. </br>
+    >> Preciso da sua ajuda. </br>
+    >> Interceptei uma mensagem importante que pode conter informações sobre um ataque cibernético. </br>
+    >> A mensagem contém o nome do país alvo deste ataque. </br>
+    >> Toda a mensagem está em letra minúscula (lowercase). </br>
+    >> Eu não consegui quebrar o código, mas acho que você conseguirá. </br>
+    >> O código está puramente em binário.</br>
+    >> Sabemos que a mensagem decodificada está totalmente em português e não tem acento.</br>
+    >> Irei te conectar a nossa rede criptografada para que você tenha acesso a transmissão.</br>
+    >> Boa sorte. Dependemos de você!.</br>
+    </br></br></br>
+    >> Digite init para começar!
+  </p>
+  <div align="center" style="bottom:0; width:100%; margin-bottom: 20px; position: fixed;">
+    <input id="terminal" type="text" autofocus></input>
+  </div>
+
+  <script src='main.js'></script>
+</body>
+
+</html>
