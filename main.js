@@ -17,17 +17,17 @@ terminal.onkeypress = function(e){
   }
 }
 
-function 6oanoA() {
+function sextoanoA() {
   admin();
   turma = 1;
 }
 
-function 6oanoB() {
+function sextoanoB() {
   admin();
   turma = 2;
 }
 
-function 6oanoC() {
+function sextoanoC() {
   admin();
   turma = 3;
 }
