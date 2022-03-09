@@ -17,16 +17,20 @@ terminal.onkeypress = function(e){
   }
 }
 
-function init() {
+function 6oanoA() {
   admin();
   turma = 1;
 }
 
-function atsppt() {
+function 6oanoB() {
   admin();
   turma = 2;
 }
 
+function 6oanoC() {
+  admin();
+  turma = 3;
+}
 
 function admin() {
   limparTerminal();
@@ -121,7 +125,8 @@ function specs() {
     `);
     mostrarNoTerminal("\n");
   }
-
+  
+  //editar
   if (sala === 3) {
     mostrarNoTerminal(`
       Processador: Intel(R) Core(TM) i7-4790k <br/>
@@ -168,6 +173,15 @@ function inspect() {
     if (sala === 4) message = "ADD  00100011 00100010"; // 35 + 34 = 69 (163)
   }
 
+  
+  if(turma === 3) {
+    if (sala === 0) message = "Você precisa estar conectado ao computador de uma das salas para inspecionar."
+    if (sala === 1) message = "MUL 00011001 00000011"; // 25 * 3 = 75
+    if (sala === 2) message = "ADD 00001111 00000011"; // 15 + 3 = 18
+    if (sala === 3) message = "GT 01100100 00110010"; // 100 > 50 = 1
+    if (sala === 4) message = "ADD  00100011 00100010"; // 35 + 34 = 69 (163)
+  }
+  
   mostrarNoTerminal(message);
 }
 
@@ -183,10 +197,7 @@ function dictionary() {
   mostrarNoTerminal("ADD: soma dois números binários.");
   mostrarNoTerminal("SUB: subrai dois números binários.");
   mostrarNoTerminal("MUL: multiplica dois números binários.");
-  mostrarNoTerminal("EQ: o resultado é true (1) se os números binários são iguais.");
-  mostrarNoTerminal("NE: o resultado é true (1) se os números binários são diferentes.");
-  mostrarNoTerminal("GT: o resultado é true (1) se o primeiro número binário for maior que o segundo.");
-  mostrarNoTerminal("LT: o resultado é true (1) se o primeiro número binário for menor que o segundo.");
+  mostrarNoTerminal("DIV: divide dois números binários.");
   mostrarNoTerminal("----------------------------------------------------------------");
   mostrarNoTerminal("\n");
 }
@@ -248,6 +259,7 @@ const finalCode2 = [
 function mostrarCodigoFinal() {
   limparTerminal();
   mostrarNoTerminal("Mensagem interceptada. Local do ataque.");
+  //verificar esse código
   let mensagemFinal = turma === 1 ? finalCode : finalCode2;
   mensagemFinal.forEach(({code}) => {
     let msg = code;
@@ -283,6 +295,7 @@ function mostrarNoTerminal(mensagem) {
   resultado.innerHTML = resultado.innerHTML + ' </br> >> ' + mensagem;
 }
 
+//provavelmente mudar as dicas
 function dica() {
   var dicas = [
     "A Agência só libera acesso aos dados restritos solicitados. Caso seu comando não resulte em nada (ou em erro de permissão), possivelmente os parâmetros estão incorretos.",
