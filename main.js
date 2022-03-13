@@ -250,39 +250,39 @@ const finalCode1 = [
 ]
 
 const finalCode2 = [
-  { letter: "U", code: "01110101", color: "red" },
-  { letter: "R", code: "01110010", color: "red" },
-  { letter: "U", code: "01110101", color: "red" },
-  { letter: "G", code: "01100111", color: "red" },
+  { letter: "E", code: "01100101", color: "red" },
+  { letter: "Q", code: "01110001", color: "red" },
   { letter: "U", code: "01110101", color: "red" },
   { letter: "A", code: "01100001", color: "red" },
-  { letter: "I", code: "01101001", color: "red" },
+  { letter: "D", code: "01100100", color: "red" },
+  { letter: "O", code: "01101111", color: "red" },
+  { letter: "R", code: "01110010", color: "red" },
 ]
 
 const finalCode3 = [
-  { letter: "J", code: "01101010", color: "red" },
+  { letter: "S", code: "01110011", color: "red" },
+  { letter: "E", code: "01100101", color: "red" },
+  { letter: "N", code: "01101110", color: "red" },
+  { letter: "E", code: "01100101", color: "red" },
+  { letter: "G", code: "01100111", color: "red" },
   { letter: "A", code: "01100001", color: "red" },
-  { letter: "M", code: "01101101", color: "red" },
-  { letter: "A", code: "01100001", color: "red" },
-  { letter: "I", code: "01101001", color: "red" },
-  { letter: "C", code: "01100011", color: "red" },
-  { letter: "A", code: "01100001", color: "red" },
+  { letter: "L", code: "01101100", color: "red" },
 ]
 
 function mostrarCodigoFinal() {
   limparTerminal();
   mostrarNoTerminal("Mensagem interceptada. Local do ataque.");
 
-  //if(turma === 1) {
-  //  let mensagemFinal = finalCode1
-  //}
-  //if(turma === 2) {
-  //  let mensagemFinal = finalCode2
-  //}
-  //if(turma === 3) {
-  //  let mensagemFinal = finalCode3
-  //}
-  let mensagemFinal = turma === 1 ? finalCode1 : finalCode2;
+  if(turma === 1) {
+    let mensagemFinal = finalCode1;
+  }
+  if(turma === 2) {
+    let mensagemFinal = finalCode2;
+  }
+  if(turma === 3) {
+    let mensagemFinal = finalCode3;
+  }
+  //let mensagemFinal = turma === 1 ? finalCode1 : finalCode2;
   mensagemFinal.forEach(({code}) => {
     let msg = code;
     mostrarNoTerminal(msg);
