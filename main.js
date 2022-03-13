@@ -273,16 +273,16 @@ function mostrarCodigoFinal() {
   limparTerminal();
   mostrarNoTerminal("Mensagem interceptada. Local do ataque.");
 
-  if(turma === 1) {
-    let mensagemFinal = finalCode1
-  }
-  if(turma === 2) {
-    let mensagemFinal = finalCode2
-  }
-  if(turma === 3) {
-    let mensagemFinal = finalCode3
-  }
-  
+  //if(turma === 1) {
+  //  let mensagemFinal = finalCode1
+  //}
+  //if(turma === 2) {
+  //  let mensagemFinal = finalCode2
+  //}
+  //if(turma === 3) {
+  //  let mensagemFinal = finalCode3
+  //}
+  let mensagemFinal = turma === 1 ? finalCode1 : finalCode2;
   mensagemFinal.forEach(({code}) => {
     let msg = code;
     mostrarNoTerminal(msg);
