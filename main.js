@@ -6,7 +6,7 @@ const btnClean = document.getElementById("btn-clean");
 
 // Variáveis de Controle
 let sala = 0;
-let turma = 1; // a = 1 | b = 2
+let turma = 1; // a = 1 | b = 2 | c = 3
 
 // Comando para interpretar o "enter" no input
 terminal.onkeypress = function(e){
@@ -37,7 +37,7 @@ function admin() {
   mostrarNoTerminal("Você acessou o ponto de origem da transmissão.");
   mostrarNoTerminal("O local possui 5 salas, cada uma com um computador principal.");
   mostrarNoTerminal("Use o comando <u>help</u> no terminal para saber o que é possível fazer nos computadores.");
-  mostrarNoTerminal("As salas 1, 2, 3 e 4 estão acessíveis e de algum modo parecem estar conectadas com a sala 5.");
+  mostrarNoTerminal("As salas 1, 2 e 3 estão acessíveis e de algum modo parecem estar conectadas com a sala 4.");
   mostrarNoTerminal("Digite o número da sala que você quer entrar. Por exemplo: sala1");
 }
 
@@ -66,18 +66,21 @@ function sala4() {
   sala = 4;
   limparTerminal();
   mostrarNoTerminal("Você acessou o computador da sala 4.");
-  mostrarNoTerminal("Digite o comando help para saber o que pode ser feito.");
-}
-
-function sala5() {
-  sala = 5;
-  limparTerminal();
-  mostrarNoTerminal("Você acessou o computador da sala 5.");
   mostrarNoTerminal("Esta sala exige uma senha especial.");
-  mostrarNoTerminal("Dica: Soma dos resultados dos comandos das salas 1 a 4.");
+  mostrarNoTerminal("Dica: Soma dos resultados dos comandos das salas 1 a 3.");
   mostrarNoTerminal("");
   mostrarNoTerminal("Qual é a senha?");
 }
+
+//function sala5() {
+//  sala = 5;
+//  limparTerminal();
+//  mostrarNoTerminal("Você acessou o computador da sala 5.");
+//  mostrarNoTerminal("Esta sala exige uma senha especial.");
+//  mostrarNoTerminal("Dica: Soma dos resultados dos comandos das salas 1 a 4.");
+//  mostrarNoTerminal("");
+//  mostrarNoTerminal("Qual é a senha?");
+//}
 
 
 function help() {
@@ -159,27 +162,27 @@ function inspect() {
   let message = "";
   if(turma === 1) {
     if (sala === 0) message = "Você precisa estar conectado ao computador de uma das salas para inspecionar."
-    if (sala === 1) message = "ADD 00010100 00110010"; // 20 + 50 = 70
+    if (sala === 1) message = "ADD 10001101  00010011"; // 141 + 19 = 160
     if (sala === 2) message = "MUL 00001111 00000011"; // 15 * 3 = 45
     if (sala === 3) message = "SUB 01100100 00110010"; // 100 - 50 = 50
-    if (sala === 4) message = "GT  00100011 00100010"; // 35 > 34 = 1
+    //if (sala === 4) message = "GT  00100011 00100010"; // 35 > 34 = 1
   }
 
   if(turma === 2) {
     if (sala === 0) message = "Você precisa estar conectado ao computador de uma das salas para inspecionar."
-    if (sala === 1) message = "MUL 00011001 00000011"; // 25 * 3 = 75
-    if (sala === 2) message = "ADD 00001111 00000011"; // 15 + 3 = 18
-    if (sala === 3) message = "GT 01100100 00110010"; // 100 > 50 = 1
-    if (sala === 4) message = "ADD  00100011 00100010"; // 35 + 34 = 69 (163)
+    if (sala === 1) message = "MUL 10010110 00000011"; // 25 * 3 = 75
+    if (sala === 2) message = "SUB 10000000 01101110"; // 128 - 110 = 18
+    if (sala === 3) message = "ADD  00100011 00100010"; // 35 + 34 = 69 (163) / antes era isso: 100 > 50 = 1
+    //if (sala === 4) message = "ADD  00100011 00100010"; // 35 + 34 = 69 (163)
   }
 
   
   if(turma === 3) {
     if (sala === 0) message = "Você precisa estar conectado ao computador de uma das salas para inspecionar."
-    if (sala === 1) message = "MUL 00011001 00000011"; // 25 * 3 = 75
+    if (sala === 1) message = "DIV 11100001 00000011"; // 225 / 3 = 75
     if (sala === 2) message = "ADD 00001111 00000011"; // 15 + 3 = 18
-    if (sala === 3) message = "GT 01100100 00110010"; // 100 > 50 = 1
-    if (sala === 4) message = "ADD  00100011 00100010"; // 35 + 34 = 69 (163)
+    if (sala === 3) message = "SUB 11001000 01101110"; // 200 - 110 = 90
+    //if (sala === 4) message = "ADD  00100011 00100010"; // 35 + 34 = 69 (163)
   }
   
   mostrarNoTerminal(message);
@@ -235,7 +238,7 @@ function table() {
   `));
 }
 
-const finalCode = [
+const finalCode1 = [
   { letter: "P", code: "01110000", color: "red" },
   { letter: "O", code: "01101111", color: "blue" }, // azul -> ordem da letra no alfabeto (15)
   { letter: "R", code: "01110010", color: "red" },
@@ -247,20 +250,39 @@ const finalCode = [
 ]
 
 const finalCode2 = [
-  { letter: "E", code: "01100101", color: "red" },
-  { letter: "S", code: "01110011", color: "red" },
-  { letter: "P", code: "01110000", color: "red" },
+  { letter: "U", code: "01110101", color: "red" },
+  { letter: "R", code: "01110010", color: "red" },
+  { letter: "U", code: "01110101", color: "red" },
+  { letter: "G", code: "01100111", color: "red" },
+  { letter: "U", code: "01110101", color: "red" },
   { letter: "A", code: "01100001", color: "red" },
-  { letter: "N", code: "01101110", color: "red" },
-  { letter: "H", code: "01101000", color: "red" },
+  { letter: "I", code: "01101001", color: "red" },
+]
+
+const finalCode3 = [
+  { letter: "J", code: "01101010", color: "red" },
+  { letter: "A", code: "01100001", color: "red" },
+  { letter: "M", code: "01101101", color: "red" },
+  { letter: "A", code: "01100001", color: "red" },
+  { letter: "I", code: "01101001", color: "red" },
+  { letter: "C", code: "01100011", color: "red" },
   { letter: "A", code: "01100001", color: "red" },
 ]
 
 function mostrarCodigoFinal() {
   limparTerminal();
   mostrarNoTerminal("Mensagem interceptada. Local do ataque.");
-  //verificar esse código
-  let mensagemFinal = turma === 1 ? finalCode : finalCode2;
+
+  if(turma === 1) {
+    let mensagemFinal = finalCode1
+  }
+  if(turma === 2) {
+    let mensagemFinal = finalCode2
+  }
+  if(turma === 3) {
+    let mensagemFinal = finalCode3
+  }
+  
   mensagemFinal.forEach(({code}) => {
     let msg = code;
     mostrarNoTerminal(msg);
@@ -319,8 +341,11 @@ function executarComandosDoTerminal() {
   try { 
     eval(terminal.value + "()");
   } catch(err) {
-    if((terminal.value === "10100110" && turma === 1) || 
-       (terminal.value === "10100011" && turma === 2)) {
+    //RESPOSTA FINAL FICA AQUI
+    //turma 1: 160 + 45 + 50 = 255 | turma 1: 75 + 18 + 69 = 162 | turma 1: 75 + 18 + 90 = 183 | 
+    if((terminal.value === "11111111" && turma === 1) || 
+       (terminal.value === "10100010" && turma === 2) ||
+       (terminal.value === "10110111" && turma === 3)) {
       mostrarCodigoFinal();
     } else {
       mostrarNoTerminal("Não foi possível executar o comando: " + terminal.value);
