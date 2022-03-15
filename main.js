@@ -17,19 +17,56 @@ terminal.onkeypress = function(e){
   }
 }
 
+// Respostas finais
+
+const finalCode1 = [
+  { letter: "P", code: "01110000", color: "red"  },
+  { letter: "O", code: "01101111", color: "blue" }, // azul -> ordem da letra no alfabeto (15)
+  { letter: "R", code: "01110010", color: "red"  },
+  { letter: "T", code: "01110100", color: "red"  },
+  { letter: "U", code: "01110101", color: "blue" }, // azul -> ordem da letra no alfabeto (21)
+  { letter: "G", code: "01100111", color: "red"  },
+  { letter: "A", code: "01100001", color: "red"  },
+  { letter: "L", code: "01101100", color: "blue" }, // azul -> ordem da letra no alfabeto (12)
+]
+
+const finalCode2 = [
+  { letter: "E", code: "01100101", color: "red" },
+  { letter: "Q", code: "01110001", color: "red" },
+  { letter: "U", code: "01110101", color: "red" },
+  { letter: "A", code: "01100001", color: "red" },
+  { letter: "D", code: "01100100", color: "red" },
+  { letter: "O", code: "01101111", color: "red" },
+  { letter: "R", code: "01110010", color: "red" },
+]
+
+const finalCode3 = [
+  { letter: "S", code: "01110011", color: "red" },
+  { letter: "E", code: "01100101", color: "red" },
+  { letter: "N", code: "01101110", color: "red" },
+  { letter: "E", code: "01100101", color: "red" },
+  { letter: "G", code: "01100111", color: "red" },
+  { letter: "A", code: "01100001", color: "red" },
+  { letter: "L", code: "01101100", color: "red" },
+]
+
+
 function sextoanoA() {
   admin();
   turma = 1;
+  let mensagemFinal = finalCode1;
 }
 
 function sextoanoB() {
   admin();
   turma = 2;
+  let mensagemFinal = finalCode2;
 }
 
 function sextoanoC() {
   admin();
   turma = 3;
+  let mensagemFinal = finalCode3;
 }
 
 function admin() {
@@ -238,37 +275,6 @@ function table() {
   `));
 }
 
-const finalCode1 = [
-  { letter: "P", code: "01110000", color: "red"  },
-  { letter: "O", code: "01101111", color: "blue" }, // azul -> ordem da letra no alfabeto (15)
-  { letter: "R", code: "01110010", color: "red"  },
-  { letter: "T", code: "01110100", color: "red"  },
-  { letter: "U", code: "01110101", color: "blue" }, // azul -> ordem da letra no alfabeto (21)
-  { letter: "G", code: "01100111", color: "red"  },
-  { letter: "A", code: "01100001", color: "red"  },
-  { letter: "L", code: "01101100", color: "blue" }, // azul -> ordem da letra no alfabeto (12)
-]
-
-const finalCode2 = [
-  { letter: "E", code: "01100101", color: "red" },
-  { letter: "Q", code: "01110001", color: "red" },
-  { letter: "U", code: "01110101", color: "red" },
-  { letter: "A", code: "01100001", color: "red" },
-  { letter: "D", code: "01100100", color: "red" },
-  { letter: "O", code: "01101111", color: "red" },
-  { letter: "R", code: "01110010", color: "red" },
-]
-
-const finalCode3 = [
-  { letter: "S", code: "01110011", color: "red" },
-  { letter: "E", code: "01100101", color: "red" },
-  { letter: "N", code: "01101110", color: "red" },
-  { letter: "E", code: "01100101", color: "red" },
-  { letter: "G", code: "01100111", color: "red" },
-  { letter: "A", code: "01100001", color: "red" },
-  { letter: "L", code: "01101100", color: "red" },
-]
-
 function mostrarCodigoFinal() {
   limparTerminal();
   mostrarNoTerminal("Mensagem interceptada. Local do ataque.");
@@ -282,7 +288,7 @@ function mostrarCodigoFinal() {
   //if(turma === 3) {
   //  let mensagemFinal = finalCode3;
   //}
-  let mensagemFinal = turma === 1 ? finalCode1 : finalCode2;
+ // let mensagemFinal = turma === 1 ? finalCode1 : finalCode2;
   mensagemFinal.forEach(({code}) => {
     let msg = code;
     mostrarNoTerminal(msg);
