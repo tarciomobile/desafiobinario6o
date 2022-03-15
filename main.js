@@ -239,13 +239,13 @@ function table() {
 }
 
 const finalCode1 = [
-  { letter: "P", code: "01110000", color: "red" },
+  { letter: "P", code: "01110000", color: "red"  },
   { letter: "O", code: "01101111", color: "blue" }, // azul -> ordem da letra no alfabeto (15)
-  { letter: "R", code: "01110010", color: "red" },
-  { letter: "T", code: "01110100", color: "red" },
+  { letter: "R", code: "01110010", color: "red"  },
+  { letter: "T", code: "01110100", color: "red"  },
   { letter: "U", code: "01110101", color: "blue" }, // azul -> ordem da letra no alfabeto (21)
-  { letter: "G", code: "01100111", color: "red" },
-  { letter: "A", code: "01100001", color: "red" },
+  { letter: "G", code: "01100111", color: "red"  },
+  { letter: "A", code: "01100001", color: "red"  },
   { letter: "L", code: "01101100", color: "blue" }, // azul -> ordem da letra no alfabeto (12)
 ]
 
@@ -342,7 +342,7 @@ function executarComandosDoTerminal() {
     eval(terminal.value + "()");
   } catch(err) {
     //RESPOSTA FINAL FICA AQUI
-    //turma 1: 160 + 45 + 50 = 255 | turma 1: 75 + 18 + 69 = 162 | turma 1: 75 + 18 + 90 = 183 | 
+    //turma 1: 160 + 45 + 50 = 255 | turma 2: 75 + 18 + 69 = 162 | turma 3: 75 + 18 + 90 = 183 | 
     if((terminal.value === "11111111" && turma === 1) || 
        (terminal.value === "10100010" && turma === 2) ||
        (terminal.value === "10110111" && turma === 3)) {
