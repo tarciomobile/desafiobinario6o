@@ -35,7 +35,7 @@ function sextoanoC() {
 function admin() {
   limparTerminal();
   mostrarNoTerminal("Você acessou o ponto de origem da transmissão.");
-  mostrarNoTerminal("O local possui 5 salas, cada uma com um computador principal.");
+  mostrarNoTerminal("O local possui 4 salas, cada uma com um computador principal.");
   mostrarNoTerminal("Use o comando <u>help</u> no terminal para saber o que é possível fazer nos computadores.");
   mostrarNoTerminal("As salas 1, 2 e 3 estão acessíveis e de algum modo parecem estar conectadas com a sala 4.");
   mostrarNoTerminal("Digite o número da sala que você quer entrar. Por exemplo: sala1");
