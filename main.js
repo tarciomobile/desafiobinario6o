@@ -55,19 +55,19 @@ let mensagemFinal = finalCode1;
 function sextoanoA() {
   admin();
   turma = 1;
-  let mensagemFinal = finalCode1;
+  mensagemFinal = finalCode1;
 }
 
 function sextoanoB() {
   admin();
   turma = 2;
-  let mensagemFinal = finalCode2;
+  mensagemFinal = finalCode2;
 }
 
 function sextoanoC() {
   admin();
   turma = 3;
-  let mensagemFinal = finalCode3;
+  mensagemFinal = finalCode3;
 }
 
 function admin() {
