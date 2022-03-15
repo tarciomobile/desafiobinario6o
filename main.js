@@ -170,7 +170,7 @@ function inspect() {
 
   if(turma === 2) {
     if (sala === 0) message = "Você precisa estar conectado ao computador de uma das salas para inspecionar."
-    if (sala === 1) message = "MUL 10010110 00000011"; // 25 * 3 = 75
+    if (sala === 1) message = "MUL 00011001 00000011"; // 25 * 3 = 75
     if (sala === 2) message = "SUB 10000000 01101110"; // 128 - 110 = 18
     if (sala === 3) message = "ADD  00100011 00100010"; // 35 + 34 = 69 (163) / antes era isso: 100 > 50 = 1
     //if (sala === 4) message = "ADD  00100011 00100010"; // 35 + 34 = 69 (163)
