@@ -256,7 +256,7 @@ const finalCode2 = [
   { letter: "A", code: "01100001", color: "red" },
   { letter: "D", code: "01100100", color: "red" },
   { letter: "O", code: "01101111", color: "red" },
-  { letter: "R", code: "01110010", color: "red" },
+  { letter: "R", code: "01110010", color: "red" }
 ]
 
 const finalCode3 = [
@@ -266,7 +266,7 @@ const finalCode3 = [
   { letter: "E", code: "01100101", color: "red" },
   { letter: "G", code: "01100111", color: "red" },
   { letter: "A", code: "01100001", color: "red" },
-  { letter: "L", code: "01101100", color: "red" },
+  { letter: "L", code: "01101100", color: "red" }
 ]
 
 function mostrarCodigoFinal() {
