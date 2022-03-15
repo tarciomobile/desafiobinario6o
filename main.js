@@ -50,6 +50,7 @@ const finalCode3 = [
   { letter: "L", code: "01101100", color: "red" },
 ]
 
+let mensagemFinal = finalCode1;
 
 function sextoanoA() {
   admin();
