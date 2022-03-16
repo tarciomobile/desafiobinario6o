@@ -7,6 +7,7 @@ const btnClean = document.getElementById("btn-clean");
 // Variáveis de Controle
 let sala = 0;
 let turma = 1; // a = 1 | b = 2 | c = 3
+let final = 0;
 
 // Comando para interpretar o "enter" no input
 terminal.onkeypress = function(e){
@@ -354,7 +355,13 @@ function executarComandosDoTerminal() {
        (terminal.value === "10100010" && turma === 2) ||
        (terminal.value === "10110111" && turma === 3)) {
       mostrarCodigoFinal();
-    } else {
+      final = 1
+    } else if((terminal.value === "portugal" && final === 1 && turma === 1) ||
+              (terminal.value === "equador" && final === 1 && turma === 2) ||
+              (terminal.value === "senegal" && final === 1 && turma === 3) ||) {
+      mostrarNoTerminal("Você conseguiu o descobrir o país que será atacado e o salvou. Parabéns!")
+    }
+    else {
       mostrarNoTerminal("Não foi possível executar o comando: " + terminal.value);
     }
   } finally {
