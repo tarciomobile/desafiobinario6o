@@ -359,7 +359,7 @@ function executarComandosDoTerminal() {
     } else if((terminal.value === "portugal" && final === 1 && turma === 1) ||
               (terminal.value === "equador" && final === 1 && turma === 2) ||
               (terminal.value === "senegal" && final === 1 && turma === 3)) {
-      mostrarNoTerminal("Você conseguiu o descobrir o país que será atacado e o salvou. Parabéns!")
+      mostrarNoTerminal("Você conseguiu descobrir o país que será atacado e o salvou. Parabéns!")
     }
     else {
       mostrarNoTerminal("Não foi possível executar o comando: " + terminal.value);
