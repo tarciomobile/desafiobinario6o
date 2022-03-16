@@ -358,7 +358,7 @@ function executarComandosDoTerminal() {
       final = 1
     } else if((terminal.value === "portugal" && final === 1 && turma === 1) ||
               (terminal.value === "equador" && final === 1 && turma === 2) ||
-              (terminal.value === "senegal" && final === 1 && turma === 3) ||) {
+              (terminal.value === "senegal" && final === 1 && turma === 3)) {
       mostrarNoTerminal("Você conseguiu o descobrir o país que será atacado e o salvou. Parabéns!")
     }
     else {
